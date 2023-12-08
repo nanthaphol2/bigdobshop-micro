@@ -1,0 +1,49 @@
+version: '3.8'
+
+name: bigdob-shop-db
+
+services:
+  auth-db:
+    image: mongo
+    container_name: auth-db
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 123456
+
+  cart-db:
+    image: mongo
+    container_name: cart-db
+    ports:
+      - 27018:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 123456
+
+  profile-db:
+    image: mongo
+    container_name: profile-db
+    ports:
+      - 27019:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 123456
+
+  inventory-db:
+    image: mongo
+    container_name: inventory-db
+    ports:
+      - 27020:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 123456
+
+  payment-db:
+    image: mongo
+    container_name: payment-db
+    ports:
+      - 27021:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 123456
