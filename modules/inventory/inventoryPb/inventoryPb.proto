@@ -1,0 +1,20 @@
+// Version
+syntax = "proto3";
+
+// Package name
+option go_package = "github.com/nanthaphol2/bigdobshop-micro";
+
+// Structures
+message IsAvaliableToSellReq {
+    string profileId = 1;
+    string cartId = 2;
+}
+
+message IsAvaliableToSellRes {
+    bool isAvaliable = 1;
+}
+
+// Methods
+service InventoryGrpcService {
+    rpc IsAvaliableToSell(IsAvaliableToSellReq) returns (IsAvaliableToSellRes);
+}
