@@ -34,4 +34,11 @@ type (
 		ProfileId string  `json:"profile_id" bson:"profile_id"`
 		Balance   float64 `json:"balance" bson:"balance"`
 	}
+
+	ProfileTransaction struct {
+		Id        primitive.ObjectID `bson:"_id,omitempty"`
+		ProfileId string             `bson:"profile_id"`
+		Amount    float64            `bson:"amount"`
+		CreatedAt time.Time          `bson:"created_at"`
+	}
 )
