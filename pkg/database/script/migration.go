@@ -22,14 +22,14 @@ func main() {
 
 	switch cfg.App.Name {
 	case "profile":
-		// migration.ProfileMigrate(ctx, &cfg)
+		migration.ProfileMigrate(ctx, &cfg)
 	case "auth":
 		migration.AuthMigrate(ctx, &cfg)
 	case "cart":
-		// migration.CartMigrate(ctx, &cfg)
+		migration.CartMigrate(ctx, &cfg)
 	case "inventory":
-		// migration.InventoryMigrate(ctx, &cfg)
+		migration.InventoryMigrate(ctx, &cfg)
 	case "payment":
-		// migration.PaymentMigrate(ctx, &cfg)
+		migration.PaymentMigrate(ctx, &cfg)
 	}
 }
