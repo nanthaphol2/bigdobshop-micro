@@ -27,11 +27,11 @@ func (s *server) profileService() {
 		grpcServer.Serve(lis)
 	}()
 
-	_ = httpHandler
 	_ = grpcHandler
 	_ = queueHandler
 
 	profile := s.app.Group("/profile_v1")
 
 	profile.GET("", s.healthCheckService)
+	profile.POST("/profile/register", httpHandler.CreateProfile)
 }
